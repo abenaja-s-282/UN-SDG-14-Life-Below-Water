@@ -1,0 +1,178 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.75;
+        }
+
+        /* Reuse global header/footer from style.css */
+        header{
+            position: relative;
+            z-index: 1000;;
+        }
+        .pe-wrapper {
+            display: flex;
+            max-width: 1100px;
+            margin: 100px auto 4rem;
+            margin-top: 80px; 
+            gap: 2rem;
+            padding: 0 1.5rem;
+        }
+
+        /* ---- Sticky sidebar TOC ---- */
+        .pe-sidebar {
+            width: 220px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 100px;
+            align-self: flex-start;
+        }
+
+        .pe-sidebar nav {
+            background: white;
+            border-radius: 12px;
+            padding: 1.2rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+        }
+
+        .pe-sidebar nav h3 {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #0077b6;
+            margin-bottom: 0.8rem;
+        }
+
+        .pe-sidebar nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .pe-sidebar nav ul li a {
+            font-size: 0.82rem;
+            color: #333;
+            text-decoration: none;
+            padding: 3px 6px;
+            border-radius: 4px;
+            display: block;
+            transition: 0.2s;
+        }
+
+        .pe-sidebar nav ul li a:hover {
+            background: #e0f0ff;
+            color: #0077b6;
+        }
+
+        /* ---- Main report area ---- */
+        .pe-main {
+            flex: 1;
+        }
+
+        .pe-card {
+            background: white;
+            border-radius: 14px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            margin-bottom: 2rem;
+            scroll-margin-top: 100px;
+        }
+
+        .pe-card h2 {
+            font-size: 1.4rem;
+            color: #03045e;
+            border-bottom: 3px solid #48cae4;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .pe-card h3 {
+            font-size: 1.05rem;
+            color: #0077b6;
+            margin: 1.2rem 0 0.5rem;
+        }
+
+        .pe-card p, .pe-card li {
+            font-size: 0.93rem;
+            color: #334;
+        }
+
+        .pe-card ul, .pe-card ol {
+            margin: 0.5rem 0 0.5rem 1.2rem;
+        }
+
+        .pe-card ul li, .pe-card ol li {
+            margin-bottom: 4px;
+        }
+
+        /* Identity banner at top */
+        .pe-identity {
+            background: linear-gradient(135deg, #03045e, #0077b6);
+            color: white;
+            border-radius: 14px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .pe-identity h1 { font-size: 1.6rem; }
+        .pe-identity .role-badge {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Page links */
+        .page-link-btn {
+            display: inline-block;
+            margin-top: 0.5rem;
+            background: #0077b6;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .page-link-btn:hover { background: #03045e; }
+
+        /* Meetings table */
+        .meetings-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin-top: 0.8rem;
+        }
+
+        .meetings-table th {
+            background: #0077b6;
+            color: white;
+            padding: 0.6rem 0.8rem;
+            text-align: left;
+        }
+
+        .meetings-table td {
+            padding: 0.55rem 0.8rem;
+            border-bottom: 1px solid #e5eeff;
+            vertical-align: top;
+        }
+
+        .meetings-table tr:nth-child(even) td { background: #f5faff; }
+
+
+        @media (max-width: 768px) {
+            .pe-wrapper { flex-direction: column; }
+            .pe-sidebar { width: 100%; position: static; }
+        }

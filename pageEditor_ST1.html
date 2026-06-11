@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Below Water | Page Editor ST1</title>
+    
+    <link rel="stylesheet" href="Global.css">
+    <link rel="stylesheet" href="pageEditor_ST1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="Home.html" class="logo">
+            <img src="Images/Student1_image18.png" alt="Logo">
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Peer.html">Action Impact Simulator</a></li>
+                <li><a href="Peer.html">User Profile</a></li>
+                <li><a href="Peer.html">Team</a></li>
+                <li><a href="Peer.html">Sitemap</a></li>
+                <li><a href="Peer.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="pe-wrapper">
+
+        <aside class="pe-sidebar">
+            <nav aria-label="Page editor contents">
+                <h3>Contents</h3>
+                <ul>
+                    <li><a href="#identity">Overview</a></li>
+                    <li><a href="#Home_page">Home Page</a></li>
+                    <li><a href="#Gallery_page">Gallery Page</a></li>
+                    <li><a href="#contentST1_page">Content Page - Student 1</a></li>
+                    <li><a href="#challenges">Challenges & Lessons</a></li>
+                    <li><a href="#janet">Compliance</a></li>
+                    <li><a href="#meetings">Group Meetings</a></li>
+                    <li><a href="#references">References</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="pe-main">
+
+            <div class="pe-identity" id="identity">
+                <div>
+                    <h1>Page Editor - Student 1</h1>
+                    <p style="opacity:0.85;margin-top:0.3rem;font-size:0.95rem;">Life Below Water | SDG 14 Group Website</p>
+                </div>
+                <div class="role-badge">Front-end Developer</div>
+            </div>
+
+            <!Overview>
+            <section class="pe-card">
+                <h2>Student Overview</h2>
+                <p><strong>Role:</strong> Student 1 - Home, Gallery &amp; Content Page Developer</p>
+                <p style="margin-top:0.5rem;"><strong>Pages Implemented:</strong></p>
+                <ul>
+                    <li>Home Page - <code>Home.html</code></li>
+                    <li>Gallery Page - <code>Gallery.html</code></li>
+                    <li>Content Page (Marine Pollution) - <code>content_ST1.html</code></li>
+                    <li>Page Editor - <code>pageEditor_ST1.html</code></li>
+                    <li>Validation Page - <code>validation_ST1.html</code></li>
+                </ul>
+                <p style="margin-top:0.8rem;"><strong>External CSS Files Created:</strong></p>
+                <ul>
+                    <li><code>Global.css</code> - Used to define common styles shared across all pages of the website.</li>
+                    <li><code>Home.css</code> - Used to design the layout and presentation of the main landing page.</li>
+                    <li><code>Gallery.css</code> - Used to style the gallery page</li>
+                    <li><code>content_ST1.css</code> - Used to style the content page focusing on Marine Pollution</li>
+                </ul>
+            </section>
+
+            <section class="pe-card" id="Home_page">
+                <h2>Home Page</h2>
+                <a href="Home.html" target="_blank" class="page-link-btn" rel="noopener">Open Page </a>
+                <a href="validation_ST1.html#val-Home" target="_blank" class="page-link-btn" rel="noopener" style="margin-left:0.5rem;background:#48cae4;color:#03045e;">Validation Evidence </a>
+
+                <h3>Technical Description</h3>
+                <p>The Home Page was built using a robust semantic HTML5 structure, strictly adhering to the shared template with <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> tags. Inside the <code>&lt;main&gt;</code> area, I used <code>&lt;section&gt;</code> containers to group distinct parts of the page.</p>
+    
+                <ul>
+                    <li><strong>Content Cards: </strong>I implemented the three mandatory action cards inside a <code>.card-container</code>. Each <code>.card</code> uses an intuitive structure combining an image, a heading, a descriptive paragraph, and an unordered list to highlight key actions.</li>
+                    <li><strong>Interactive Gallery: </strong>The "Main Topics" section serves as the interactive gallery. I use anchor tags wrapping images and text to create clickable cards that route users to the individual content pages.</li> 
+                    <li><strong>Advanced Javascript Engines: </strong>Bubble Engine - I implemented a dynamic background using an HTML5 <code>&lt;canvas id="bubble-canvas"&gt;</code>. The script utilizes the 2D context API to generate, animate, and recycle floating bubble objects, creating an immersive underwater effect.<br> Scroll Reveal Engine - I used the modern <code>IntersectionObserver</code> API to monitor elements with the <code>.reveal</code> class. As the user scrolls and these elements enter the viewport, the script dynamically adds an <code>.active</code> class to trigger smooth CSS entrance animations.</li>
+                </ul>
+
+                <h3>Accessibility</h3>
+                <p>I ensured the Home Page is accessible and inclusive by implementing the following practices:</p>
+                <ul>
+                    <li><strong>Semantic Hierarchy: </strong>The page uses a logical heading structure starting with a single <code>&lt;h1&gt;</code> in the hero section, followed by <code>&lt;h2&gt;</code> for section titles, and <code>&lt;h3&gt;</code> for individual topic cards. This creates a clear document outline for screen reader users.</li>
+                    <li><strong>Descriptive Alt Text: </strong>Every image on the page includes a highly descriptive alt attribute that conveys context rather than just the file name <code>(e.g., alt="Bleached coral reef affected by climate change" and alt="Ocean-cleaning robot in coastal waters")</code>.</li>
+                    <li><strong>Navigation Aids: </strong>I included a "↑ Top" anchor link at the bottom of the main content that links back to the <code>#top</code> ID, making it easier for keyboard-only users to jump back to the main navigation without excessive scrolling.</li>
+                </ul>
+            </section>
+
+            <!Team Page>
+            <section class="pe-card" id="Gallery_page">
+                <h2>Gallery Page</h2>
+                <a href="Gallery.html" target="_blank" class="page-link-btn" rel="noopener">Open Page </a>
+                <a href="validation_ST1.html#val-Gallery" target="_blank" class="page-link-btn" rel="noopener" style="margin-left:0.5rem;background:#48cae4;color:#03045e;">Validation Evidence </a>
+
+                <h3>Technical Description</h3>
+                <p>The Gallery page was implemented as an interactive media hub using a combination of CSS Flexbox and custom JavaScript functions. The layout uses a <code>&lt;div class="gallery-grid"&gt;</code> container to organize image cards. Each card contains an image and a "View Details" button that triggers the JavaScript <code>openExtended()</code> function.<br> The core functionality of the page is the Extended View Modal. I wrote several JavaScript functions to handle the user interaction:</p>
+                <ul>
+                    <li><strong><code>openExtended(title, imgSrc, desc)</code>: </strong>This function dynamically updates the modal's content using <code>innerText</code> and <code>src</code> properties before displaying the <code>&lt;div id="extendedView"&gt;</code>.
+                    <li><strong>Style Customization: </strong>I implemented <code>changeStyle(theme)</code> and <code>changeSize(size)</code> functions. These allow users to manipulate the DOM directly, changing the <code>backgroundColor</code>, <code>color</code>, and <code>fontSize</code> of the modal content in real-time.</li>
+                    <li><strong>Event Handling: </strong>A global <code>window.onclick</code> listener was added to ensure the modal closes if a user clicks outside the content box, improving the user flow.</li>
+                </ul>   
+
+                <h3>Accessibility</h3>
+                <p>Accessibility was integrated into the Gallery to ensure it is usable for all individuals:</p>
+                <ul>
+                    <li><strong>Dynamic Accessibility Features: </strong>The inclusion of a "Change Style" and "Change Font Size" feature directly addresses accessibility by allowing users with visual impairments to switch to a high-contrast (Dark) mode or increase the text size for better readability.</li>
+                    <li><strong>Keyboard and Mouse Interaction: </strong>The modal is designed to be easily dismissed. I used a <code><span class="close"></code> element with an <code>onclick</code> event, and the "click-outside-to-close" logic ensures users aren't "trapped" inside the modal view.</li>
+                    <li><strong>Alternative Text: </strong>Each image in the gallery includes descriptive <code>alt</code> attributes to provide context for users relying on screen readers.</li>
+                    <li><strong>Logical Structure: </strong>The page maintains the team's global <code><nav></code> and <code><header></code> structure, providing a consistent navigation experience across the entire site.</li>
+            </section>
+
+            <!Content Page>
+            <section class="pe-card" id="contentST1_page">
+                <h2>Content Page - Marine Pollution</h2>
+                <a href="content_ST1.html" target="_blank" class="page-link-btn" rel="noopener">Open Page </a>
+                <a href="validation_ST1.html#val-contentST1" target="_blank" class="page-link-btn" rel="noopener" style="margin-left:0.5rem;background:#48cae4;color:#03045e;">Validation Evidence </a>
+
+                <h3>Technical Description</h3>
+                <p>The content page for "Marine Pollution" was developed using a clean, semantic HTML5 structure. The page is divided into logical segments using &lt;section&gt; tags, each identified with a unique id to enable Internal Linking.<br>Key technical implementations include: </p>
+                <ul>
+                    <li><strong>Navigation & Anchor Tags: </strong>I implemented a local navigation menu using an unordered list (&lt;ul&gt;) where each &lt;a&gt; tag links to a specific section ID on the same page, allowing for seamless user movement.</li>
+                    <li><strong>Back to Top Feature: </strong>To improve the user experience on this long-form content page, I assigned id="top" to the &lt;body&gt; tag. I then placed a "Back to Top" link in the &lt;footer&gt; using an anchor tag (&lt;a href="#top"&gt;), which provides a quick way for users to return to the header.</li>
+                    <li><strong>Structured Data: </strong>I utilized a combination of &lt;h2&gt; and &lt;h3&gt; tags to create a clear content hierarchy, and used &lt;ul&gt; and &lt;li&gt; tags to present the "Key Solutions" in an organized, readable list format.</li>
+                    <li><strong>Styling Consistency: </strong>The page links to both Global.css for shared team styles (like the header and footer) and a specific content_ST1.css to manage the unique layout and typography of this information-heavy page.</li>
+                </ul>
+
+                <h3>Accessibility</h3>
+                <p>Accessibility was a core focus to ensure the environmental data is available to all users:</p>
+                <ul>
+                    <li><strong>Skip-Link Behaviour: </strong>By utilizing internal section links, I provided a way for keyboard users and screen readers to skip directly to relevant information without having to tab through the entire header navigation every time.</li>
+                    <li><strong>Descriptive Alt Text: </strong>All informational images, such as the plastic bottle impact graphics, include descriptive <code>alt</code> attributes to ensure the message is conveyed to visually impaired users.</li>
+                    <li><strong>Logical Heading Levels: </strong>I strictly followed a descending heading order, ensuring that screen readers can generate an accurate document outline for the user.</li>
+                </ul>
+            </section>
+
+            <!Challenges>
+            <section class="pe-card" id="challenges">
+                <h2>Challenges &amp; Lessons Learned</h2>
+
+                <h3>Managing Global Consistency</h3>
+                <p>One of the primary challenges was developing the <code>Global.css</code> file to be used by all four team members. I had to ensure that the header, navigation, and footer styles were "bulletproof" so that when other students added their unique content, the layout wouldn't break. I learned the importance of using specific class naming conventions to avoid "CSS collisions," where a style meant for the Home page might accidentally change the appearance of the Feedback or Sitemap pages.
+
+                <h3>Optimizing the JavaScript Bubble Engine</h3>
+                <p>Implementing the <code>&lt;canvas&gt;</code> bubble effect on the Home page presented a performance challenge. Initially, creating too many bubble objects caused the page to lag during scrolling. I learned how to optimize the animation loop using <code>requestAnimationFrame()</code> and how to "recycle" objects—resetting a bubble's position to the bottom of the screen once it floated off the top—rather than constantly creating and deleting new objects in memory.</p>
+
+                <h3>Handling Asynchronous DOM Updates in the Gallery</h3>
+                <p>In the Gallery, ensuring the <code>openExtended()</code> function correctly mapped the right image and description to the modal was difficult. I encountered a bug where the modal would occasionally show the previous image. This taught me a lot about how JavaScript interacts with the DOM and the importance of strictly passing parameters (title, src, desc) directly into the function to ensure the UI updates instantly and accurately.</p>
+
+                <h3>Balancing Design and Accessibility</h3>
+                <p>A significant lesson learned was that "cool" features can often create barriers for accessibility. I had to learn how to use CSS <code>z-index</code> properly to ensure the background canvas stayed behind the text so it didn't interfere with readability, and how to implement a "Close" function that works both with a button and a screen-wide click listener to help users navigate easily.</p>
+
+                <h3>Team Integration and Version Control</h3>
+                <p>As the person responsible for the main navigation, I had to constantly update the links as other students finished their pages. Coordinating these file names (e.g., ensuring everyone used content_ST2.html vs content-st2.html) taught me the necessity of clear team communication and creating a shared file-naming standard early in the project.</p>
+            </section>
+
+            <!JANET Compliance>
+            <section class="pe-card" id="janet">
+                <h2>JANET Compliance</h2>
+                <p>The development of the "Life Below Water" website was conducted in strict adherence to the JANET Acceptable Use Policy, which governs the use of the UK’s academic network. As Student 1, I ensured that the core infrastructure of the site—including the global styles and interactive elements—meets these professional and ethical standards.</p>
+                <br>
+                <p>First, I ensured that all content remains strictly educational and non-commercial. The Home page and the Plastic Pollution content page are designed solely to raise awareness about Marine Pollution. In compliance with JANET’s "Purpose of the Network" regulations, the site contains no advertisements, for-profit activities, or unauthorized commercial lobbying, ensuring the academic integrity of the project.</p>
+                <br>
+                <p>Second, I addressed the regulation regarding Network Disturbance. JANET prohibits any activity that causes an unreasonable load on the network or degrades performance for other users. To comply with this, I optimized the "Bubble Engine" on the Home page. By using requestAnimationFrame and recycling bubble objects within the &lt;canvas&gt; element instead of constantly creating new ones, I ensured the JavaScript is memory-efficient and does not slow down the user's browser or the hosting environment.</p>
+                <br>
+                <p>Furthermore, I have respected Intellectual Property Rights. Every image used in the Gallery and on my content page includes descriptive context. By providing a comprehensive References section and using royalty-free assets where possible, I have ensured that the project does not distribute materials that infringe on copyright, which is a core violation of JANET policy.</p>
+                <br>
+                <p>Finally, I applied the principle of Inclusivity and Accessibility. JANET encourages the creation of resources that are usable by the entire community. I demonstrated this by building high-contrast "Dark Mode" and "Large Text" functions into the Gallery using JavaScript DOM updates. This realistic application of accessibility standards ensures that the environmental data we are publishing is available to all users, regardless of their physical or visual requirements. By maintaining this level of technical and ethical discipline, the pages I created remain fully compliant with the regulations governing academic web publication.</p>
+            </section>
+
+            <!Group Meetings>
+            <section class="pe-card" id="meetings">
+                <h2>Group Meetings &amp; Individual Contribution Log</h2>
+                <p style="font-size:0.88rem;color:#667;margin-bottom:1rem;">A minimum of six meetings is required. Format: in-person / online / hybrid.</p>
+
+                <table class="meetings-table" aria-label="Group meeting log for Student 3">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Date &amp; Time</th>
+                            <th>Format</th>
+                            <th>Objective</th>
+                            <th>Attended</th>
+                            <th>My Contribution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>5 Feb 2026, 2:00 PM</td>
+                            <td>Face-to-face</td>
+                            <td>Agree SDG topic and assign individual roles</td>
+                            <td>Yes</td>
+                            <td>Officially agreed on SDG 14 - Life Below Water as our project topic. Assigned individual roles to ensure full coverage of requirements. I agreed to take the Home, Gallery and one of the Content pages.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>12 Feb 2026, 11:00 AM</td>
+                            <td>Online (Teams)</td>
+                            <td>Review shared template and agree colour palette</td>
+                            <td>Yes</td>
+                            <td>Finalized the color palette and typography. I presented the initial Global.css and the shared HTML template to ensure all pages would have a consistent header, navigation, and footer.</td>
+                        <tr>
+                            <td>3</td>
+                            <td>19 Feb 2026, 1:00 PM</td>
+                            <td>Face-to-face</td>
+                            <td>Progress review - each member shows first draft</td>
+                            <td>Yes</td>
+                            <td>I demonstrated the JavaScript Bubble Engine for the Home page and the Modal View for the Gallery. We discussed fixing a bug regarding image mapping in the modal.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>26 Feb 2026, 3:00 PM</td>
+                            <td>Online (Teams)</td>
+                            <td>Review JavaScript features and ensure consistency</td>
+                            <td>Yes</td>
+                            <td>Shared my JavaScript with the group and checked their features.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5 Mar 2026, 12:00 PM</td>
+                            <td>Hybrid</td>
+                            <td>Cross-check all navigation links and file names</td>
+                            <td>Yes</td>
+                            <td>I worked with the team to ensure their individual content pages (ST2, ST3, ST4) were correctly linked in the main navigation and the interactive gallery hub.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>15 Mar 2026, 2:00 PM</td>
+                            <td>Face-to-face</td>
+                            <td>Final review, validation checks, and submission prep</td>
+                            <td>Yes</td>
+                            <td> Conducted a walk-through of all links and confirmed that all pages passed the W3C HTML and CSS validation tests.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- References -->
+            <section class="pe-card" id="references">
+                <h2>References</h2>
+                <ol style="font-size:0.88rem; line-height:1.9; margin-left:1.2rem;">
+                    <li id="ref1">United Nations. (2015). <em>Sustainable Development Goal 14: Life Below Water.</em> Available at: <a href="https://sdgs.un.org/goals/goal14" target="_blank" rel="noopener">sdgs.un.org/goals/goal14</a></li>
+                    <li id="ref2">National Oceanic and Atmospheric Administration (NOAA). (2024). <em>Marine Debris Program: Plastic Pollution.</em> Available at: <a href="https://oceanservice.noaa.gov/hazards/marinedebris/" target="_blank" rel="noopener">oceanservice.noaa.gov</a></li>
+                    <li id="ref3">International Union for Conservation of Nature (IUCN). (2024). <em>Issues Brief: Marine Plastic Pollution.</em> Available at: <a href="https://www.iucn.org/resources/issues-brief/marine-plastic-pollution" target="_blank" rel="noopener">iucn.org</a></li>
+                    <li id="ref4">National Geographic Society. (2023). <em>Ocean Pollution and Its Effects.</em> Available at: <a href="https://education.nationalgeographic.org/resource/marine-pollution/" target="_blank" rel="noopener">nationalgeographic.org</a></li>
+                    <li id="ref5">Greenpeace International. (2024). <em>Industrial Waste and Ocean Health.</em> Available at: <a href="https://www.greenpeace.org/international/act/protect-the-oceans/" target="_blank" rel="noopener">greenpeace.org</a></li>
+                    <li id="ref6">Google Fonts. (2024). <em>Inter and Outfit Font Families.</em> Available at: <a href="https://fonts.google.com/" target="_blank" rel="noopener">fonts.google.com</a></li>
+                    <li id="ref7">Economou, D. (2026). <em>Web Design and Development — Lecture Notes: Semantic HTML, CSS Layouts, and JavaScript Interactions.</em> University of Westminster [Module materials, internal access only].</li>
+                    <li id="ref8">Mozilla Developer Network. (2024). <em>MDN Web Docs: CSS :focus-within.</em> Available at: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within" target="_blank" rel="noopener">developer.mozilla.org</a></li>
+                    <li id="ref9">iStockPhoto. (2024). <em>Royalty-free ocean and fishing imagery used under standard licence.</em> Available at: <a href="https://www.istockphoto.com" target="_blank" rel="noopener">istockphoto.com</a></li>
+                </ol>
+            </section>
+
+        </main>
+    </div>
+
+    <a href="#top" class="top-button">↑ Top</a>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="Home.html">Home</a>
+        <a href="Peer.html">Action Impact Simulator</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Peer.html">Team</a>
+        <a href="Peer.html">Feedback</a>
+        <a href="Peer.html">User Profile</a>
+        <a href="Peer.html">Sitemap</a>
+        </div>
+
+        <div class="footer-column">
+        <h3>Page Editors</h3>
+        <a href="pageEditor_ST1.html">Student 1</a>
+        <a href="Peer.html">Student 2</a>
+        <a href="Peer.html">Student 3</a>
+        <a href="Peer.html">Student 4</a>
+        </div>
+
+        <div class="footer-column">
+        <h3>Content Pages</h3>
+        <a href="content_ST1.html">Content - ST1</a>
+        <a href="Peer.html">Content - ST2</a>
+        <a href="Peer.html">Content - ST3</a>
+        <a href="Peer.html">Content - ST4</a>
+        </div>
+
+        <div class="footer-column">
+        <h3>Validation</h3>
+        <a href="validation_ST1.html">Student 1</a>
+        <a href="Peer.html">Student 2</a>
+        <a href="Peer.html">Student 3</a>
+        <a href="Peer.html">Student 4</a>
+        </div>
+
+    </div>
+
+        <div class="footer-bottom">
+            <a href="pageEditor_ST1.html" class="footer-btn">Page Editor</a>
+            <a href="validation_ST1.html" class="footer-btn">Validation Page</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* ==========================================
+   GALLERY PAGE STYLES
+   ========================================== */
+
+/* 1. The Main Container */
+main {
+    /* Top padding must be at least 120px to push content below your fixed header */
+    padding: 140px 8% 120px 8%; 
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* 2. Intro Section (Heading & Subtext) */
+.intro-section {
+    margin-bottom: 60px;
+    /* Aligns neatly with your Home.css left-aligned style */
+    max-width: 800px;
+}
+
+.intro-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: var(--dark);
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.intro-section p {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* 3. The Gallery Grid Layout */
+.gallery-grid {
+    display: grid;
+    /* Responsive grid: 3 columns on desktop, 1 on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* 4. Individual Gallery Cards */
+.gallery-item {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 119, 182, 0.1);
+    transition: var(--transition);
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(3, 4, 94, 0.05);
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(3, 4, 94, 0.15);
+    border-color: var(--primary);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Keeps images uniform and neat */
+    display: block;
+}
+
+.gallery-item h3 {
+    padding: 20px;
+    text-align: center;
+    color: var(--dark);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* FIXED MODAL STYLING */
+        .modal-overlay {
+            display: none; 
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            position: relative; /* Essential for close button */
+            color: var(--dark);
+            text-align: center;
+        }
+
+        /* Fixed Close Button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            z-index: 2100;
+        }
+
+        #extImg {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: block; /* Ensures it takes up space */
+        }
+
+        .custom-controls {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+
+        .custom-controls button {
+            margin: 5px;
+            padding: 5px 12px;
+            cursor: pointer;
+        }

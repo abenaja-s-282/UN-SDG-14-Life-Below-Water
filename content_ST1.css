@@ -1,0 +1,70 @@
+/* Layout Styling */
+.page-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 120px auto 60px; /* Space for the fixed header */
+    gap: 40px;
+    padding: 0 5%;
+}
+
+/* Sidebar Styling using Global Theme */
+.side-nav {
+    width: 800px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(3, 4, 94, 0.05);
+}
+
+.side-nav-title {
+    font-weight: 800;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.side-nav ul { list-style: none; }
+.side-nav li { margin-bottom: 12px; }
+.side-nav a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.side-nav a:hover { color: var(--primary); padding-left: 5px; }
+
+/* Content Sections */
+.intro-box { margin-bottom: 40px; }
+.intro-box h1 { color: var(--dark); font-size: 2.5rem; margin-bottom: 10px; }
+.intro-box p {color: #333;}
+
+.content-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 119, 182, 0.05);
+}
+
+.content-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+
+.card-image { position: relative; height: 280px; }
+.card-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.card-text { padding: 30px; }
+.card-text h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; }
+.card-text p { color: #444; font-size: 1rem; }
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .page-wrapper { flex-direction: column; margin-top: 100px; }
+    .side-nav { width: 100%; position: relative; top: 0; }
+}
